@@ -1,10 +1,10 @@
 const header = document.querySelector("#header");
-const container = document.querySelector("#container");
+const container = document.querySelector('#container');
 
-const userBtn = document.createElement("#button");
+const userBtn = document.createElement("button");
 userBtn.textContent = "Choose number of squares";
 
-const changeStyleBtn = document.createElement9("button");
+const changeStyleBtn = document.createElement("button");
 changeStyleBtn.textContent = "Draw in black and white";
 
 header.appendChild(userBtn);
@@ -28,6 +28,11 @@ function changeDrawingStyle() {
     if (startnewGrid) {
         userInput();
     }
+}
+
+function hoverEffect() {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach(square => square.addEventListener('mouseover', mouseenter));
 }
 
 function setUpGrid(num) {
